@@ -1,0 +1,14 @@
+<head>
+    <title>
+        Big Sean's Big Haberdashery
+    </title>
+</head>
+<body>
+    <h1>Big Sean's Big Haberdashery </h1>
+    {% for item in big_seans_orders %}
+    <h2>{{item.customer_name}} : {{item.order_date}} : {{item.product_name}} : {{item.quantity}} : {{item.address}}</h2>
+    <p> <a href="/orders/{{loop.index -1}}"> link</a> </p>
+    {% endfor %}
+    <hr>   
+</body>
+</html>
